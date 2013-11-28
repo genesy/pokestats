@@ -1,0 +1,48 @@
+$normal 	: ('normal',#A8A878);
+$fire 		: ('fire', #F08030);
+$water 		: ('water',#6890F0);
+$electric 	: ('electric',#F8D030);
+$grass 		: ('grass',#78C850);
+$ice 		: ('ice',#98D8D8);
+$fighting 	: ('fighting',#C03028);
+$poison 	: ('poison',#A040A0);
+$ground 	: ('ground',#E0C068);
+$flying 	: ('flying',#A890F0);
+$psychic 	: ('psychic',#F85888);
+$bug 		: ('bug',#A8B820);
+$rock 		: ('rock',#B8A038);
+$ghost 		: ('ghost',#705898);
+$dragon 	: ('dragon',#7038F8);
+$dark 		: ('dark',#705848);
+$steel 		: ('steel',#B8B8D0);
+$fairy 		: ('fairy',#EE99AC);
+
+
+$types: $normal, $fire, $water, $electric, $grass, $ice, $fighting, $poison, $ground, $flying, $psychic, $bug, $rock, $ghost, $dragon, $dark, $steel, $fairy;
+
+@each $type in $types {
+    $name: nth($type, 1);
+    $value: nth($type, 2);
+    .#{$name} { background-color: $value; 
+    	@include transition(background-color 0.1s ease-in-out);
+    	&:hover {
+			background-color: darken($value,20%)
+    	}}
+}
+
+
+
+.type {
+	@include text-shadow(#000 1px 1px 3px);
+	text-decoration: none;
+	font-size:12px;
+	color:white;
+	padding:2px 4px;
+	max-width: 100%;
+	display: block;
+	text-align: center;
+	text-transform: capitalize;
+	&:hover {
+		color:white;
+	}
+}

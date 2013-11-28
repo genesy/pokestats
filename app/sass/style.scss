@@ -1,0 +1,154 @@
+// $tabs-navigation-font-color: #ff0;
+@import "compass";
+@import "settings";
+@import "foundation";
+@import "types";
+
+html,body {
+	height:100%;
+	overflow:hidden;
+}
+.mainWrap {
+	// override foundation max width
+	max-width:100%;
+}
+
+table tr.caught {
+	background:darken(#f9f9f9,5%);
+	img {
+
+		filter:grayscale(100%);
+		-webkit-filter: grayscale(100%);
+	}
+}
+td.catch
+	{
+		margin: 0;
+		padding:0;
+	a {
+		width:18px;
+		height: 18px;
+		display: inline-block;
+		padding:0;
+		margin:0;
+		img {
+			height: 18px;
+			width: 18px;
+		}
+	} 	
+}
+
+
+.contentWrap{
+
+	@media #{$small-only} {
+		@include transition(all .2s ease);
+		background: #FFFFFF;
+		position: absolute;
+		width:100%;
+		right: -100%;
+		z-index: 999;
+	}
+}
+	.back {
+		width: 100%;
+		margin:0;
+	}
+.main-content {
+	overflow: auto;
+	padding-right:20px;
+	@media #{$small-only} {
+		padding-left:20px;
+	}
+	table {
+		width: 100%;
+	}
+}
+.leftWrap {
+	@media #{$small-only} { padding:0 } 
+	@media #{$large-up} {
+		padding-left:0;
+	}
+	.searchWrap {
+		input, .button {
+			margin-bottom: 0;
+		}
+	}
+	.tabs {
+		background: #ccc;
+		dd {
+			top:0;
+		}
+		dd.active a {
+			text-align: center
+		}
+	}
+	.tabs-content {
+		overflow-y:scroll;
+		& > .content {
+			padding-left:10px;
+			padding-right:10px;
+			width:100%;
+			table {
+				width: 100%
+			}
+		}
+	}
+
+	.tabs dd {
+		// width:33.3%;
+		width:50%;
+		// margin: 0;
+		a {
+			font-size:10px;
+
+		}
+		.count {
+			font-size: 10px;
+			position: relative;
+			padding: 5px;
+			top: -2px;
+
+		}
+	}
+}
+
+
+.contentWrap {
+	table {
+		td {
+			vertical-align: top;
+		}
+	}
+}
+
+
+.typewrap {
+	&.single {
+		.type {
+			width: 100%;
+		}
+	}
+	.type {
+		width:50%;
+		float: left;
+	}
+}
+
+h1 img {
+	height:96px;
+	width:96px;
+}
+.ability-table {
+	width:100%;
+}
+
+#loading {
+	z-index:9999;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:white url('../img/loading.gif') center center no-repeat;
+}
