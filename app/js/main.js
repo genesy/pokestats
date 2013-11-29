@@ -5,7 +5,7 @@ requirejs.config({
 		backbone: 'vendor/backbone-amd/backbone',
 		underscore: 'vendor/underscore-amd/underscore',
         foundation: 'vendor/foundation/js/foundation',  
-        text : 'vendor/text',
+        text : 'vendor/requirejs-text/text',
         router: 'router',
 		localstorage: 'backbone.localStorage-min',
 		app : 'app'

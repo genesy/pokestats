@@ -24,10 +24,10 @@ define([
 	    var AppRouter = Backbone.Router.extend({
 	        routes : {
 	            "!pokemon/:name":"getPokemon",
-	            "q/:search":"getSearch",
+	            "!q/:search":"getSearch",
 	            ":page":"getPage",
 	            "":"getPage",
-	            "move/:move":"getMove",
+	            "!move/:move":"getMove",
 	            "*actions":"defaultRoute"
 	        }
 	    })

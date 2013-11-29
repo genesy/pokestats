@@ -1,4 +1,6 @@
-define(['backbone','jquery'], function(Backbone) {
+define(['backbone',
+	'jquery',
+	'text!templates/pokemonRow.html'], function(Backbone, $, pokemonRow) {
 	CaughtRowView = Backbone.View.extend({
 		className: "caught-row caught",
 		tagName: "tr",
@@ -16,7 +18,7 @@ define(['backbone','jquery'], function(Backbone) {
 	    	contentView = new ContentView;
 	    	contentView.updateCounters();
 	    },
-		template: _.template($("#pokemon-row").html()),
+		template: _.template(pokemonRow),
 		render: function(){
 			// console.log(this.model);
 	        this.$el.attr("data-model",JSON.stringify(this.model.toJSON()))

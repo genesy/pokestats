@@ -1,4 +1,10 @@
-define(['backbone','jquery','collections/CaughtPokemons','views/ContentView','views/CaughtTableView'], function(Backbone,$,CaughtPokemons, ContentView) {
+define([
+	'backbone',
+	'jquery',
+	'collections/CaughtPokemons',
+	'views/ContentView',
+	'text!templates/pokemonRow.html', 
+	'views/CaughtTableView'], function(Backbone,$,CaughtPokemons, ContentView, pokemonRow) {
 
 	PokemonRowView = Backbone.View.extend({
 		events: {
@@ -20,7 +26,7 @@ define(['backbone','jquery','collections/CaughtPokemons','views/ContentView','vi
 	    	contentView = new ContentView;
 	    	contentView.updateCounters();
 	    },
-	    template: _.template($("#pokemon-row").html()),
+	    template: _.template(pokemonRow),
 	    render: function () {
 	    	caughtPokemons = new CaughtPokemons;
 	    	caughtPokemons.fetch();

@@ -1,8 +1,11 @@
-define(['backbone','jquery'], function(Backbone) {
+define([
+	'backbone',
+	'jquery',
+	'text!templates/abilityRow.html'], function(Backbone, $, abilityRow) {
 	AbilityRowView = Backbone.View.extend({
 		className:"ability-row",
 		tagName: "tr",
-		template: _.template($("#ability-row").html()),
+		template: _.template(abilityRow),
 		render: function() {
 			// console.log(this.model);
 			this.$el.attr("data-model", JSON.stringify(this.model.toJSON()))

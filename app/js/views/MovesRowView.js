@@ -1,8 +1,11 @@
-define(['backbone','jquery'], function(Backbone) {
+define([
+	'backbone',
+	'jquery',
+	'text!templates/moveRow.html'], function(Backbone, $, moveRow) {
 	MovesRowView = Backbone.View.extend({
 		className:"move-row",
 		tagName: "tr",
-		template: _.template($("#move-row").html()),
+		template: _.template(moveRow),
 		render: function() {
 			// console.log(this.model);
 			this.$el.attr("data-model", JSON.stringify(this.model.toJSON()))
