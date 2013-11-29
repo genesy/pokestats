@@ -14,7 +14,7 @@
 			<td>Type </td>
 			<td>
 				<div class="typewrap single">
-					<a href="/q/type:<%= type.toLowerCase() %>" class="type <%= type.toLowerCase() %>"><%= type.toLowerCase() %> </a>
+					<a href="#!q/type:<%= type.toLowerCase() %>" class="type <%= type.toLowerCase() %>"><%= type.toLowerCase() %> </a>
 				</div>
 			</td>
 		</tr>
@@ -81,10 +81,10 @@
 	<td class="typetd">
 
 	<div class="typewrap <% if (pokemon.types.length == 1) { %>single<% } %>">
-	<a href="/q/type:<%= pokemon.types[0] %>" class="type <%= pokemon.types[0].toLowerCase() %>"><%= pokemon.types[0] %> </a>
+	<a href="#!q/type:<%= pokemon.types[0] %>" class="type <%= pokemon.types[0].toLowerCase() %>"><%= pokemon.types[0] %> </a>
 
 	<% if (pokemon.types.length > 1) { %>
-	<a href="/q/type:<%= pokemon.types[1] %>" class="type <%= pokemon.types[1].toLowerCase() %>"><%= pokemon.types[1] %> </a>
+	<a href="#!q/type:<%= pokemon.types[1] %>" class="type <%= pokemon.types[1].toLowerCase() %>"><%= pokemon.types[1] %> </a>
 	</div>
 	<% } %>
 	</td>
